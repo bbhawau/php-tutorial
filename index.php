@@ -184,15 +184,15 @@ echo "<br>";
 
 // functions
 
-function greet($firstname, $lastname, $age) {
+function greets($firstname, $lastname, $age) {
 
     return "Hello, ". $firstname . "" . $lastname . "" . $age;
 }
 
-$message = greet("Alex", "fred", 32);
+$message = greets("Alex", "fred", 32);
 
 echo $message;
-
+echo "<br>";
 
 
 function add($a, $b, $c){
@@ -201,7 +201,7 @@ function add($a, $b, $c){
 
 $sum  =  add(4, 6, 3);
 echo "The sum is: ". $sum ;
-
+echo "<br>";
 
 //  statements
 $limits = 400;
@@ -215,7 +215,7 @@ if(!!$isPassed){
  else {
     echo "Error";
 }
-
+echo "<br>";
 
 function statem($a, $b, $c){
 
@@ -227,7 +227,7 @@ function statem($a, $b, $c){
         } elseif(premid) {
             return "lesser";
         } else{
-            jkjgjfj
+           return "jkjgjfj";
         }
     } else {
         return "lesser";
@@ -237,4 +237,23 @@ function statem($a, $b, $c){
 $checks = statem(3,5,9);
 
 echo $checks;
+echo "<br>";
+
+//ASSIGNMENT
+//function to calculate discount of a product with if statement, data type
+ function discount($price){
+if ($price >= 500 ){
+    $discount = $price * 0.5;
+    $withdiscount = $price - $discount;
+    return  $withdiscount;
+} elseif ($price >= 100 && $price < 500){
+    $discount = $price * 0.1;
+    $withdiscount = $price - $discount;
+    return $withdiscount;
+} elseif ($price < 100){
+    return $price;
+}
+ }
+ $newprice = discount(600);
+echo "Your price is " . $newprice;
 ?>
